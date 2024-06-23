@@ -1,8 +1,7 @@
-# SPEEM (Serverless Private Encrypted End-to-End Messaging)
+# SPEEM (Serverless Private Encrypted End-to-End Messaging) - WIP
 
-///--------- THIS IS A WORK IN PROGRESS ----------///
 <p align="center">
-    <img src="docs/assets/logo.jpg" width="400" alt="SPEEM logo">
+    <img src="docs/assets/logo.png" width="400" alt="SPEEM logo">
 </p>
 
 SPEEM is a highly secure, serverless messaging application designed for maximum privacy. Users can send encrypted messages directly to their trusted contacts without relying on any central servers. The application features end-to-end encryption, secure local storage, and a user-friendly pairing process via QR codes.
@@ -27,6 +26,8 @@ SPEEM leverages Rust for its core cryptographic and networking operations, encap
 For more detailed information on the architecture of the project, read the [ARCHITECTURE overview](docs/ARCHITECTURE.md)
 
 ## Project Structure
+
+*Note**: May change with time.
 
 ```
 SPEEM/
