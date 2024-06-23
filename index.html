@@ -3,46 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPEEM - Private Encrypted End-to-End Messaging</title>
+    <title>SPEEM - Serverless Private Encrypted End-to-End Messaging</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
         body {
-            font-family: 'VT323', monospace;
-            background-color: #0f0f0f;
-            color: #33ff33;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
         header {
             text-align: center;
             padding: 50px 0;
-            background-color: #004400;
+            background-color: #0066cc;
+            color: white;
         }
         header h1 {
             margin: 0;
-            font-size: 3em;
-            color: #33ff33;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
         }
         section {
             margin: 20px 0;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         section h2 {
-            color: #00cc00;
+            color: #0066cc;
+            margin-top: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e7f3ff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 4px;
         }
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #004400;
-            color: #33ff33;
+            background-color: #0066cc;
+            color: white;
         }
         a {
-            color: #33ff33;
+            color: #0066cc;
             text-decoration: none;
         }
         a:hover {
@@ -65,7 +83,7 @@
 
     <section>
         <h2>Our Mission</h2>
-        <p>SPEEM aims to provide a truly private messaging experience. By eliminating the need for centralized servers, we ensure that your data remains in your hands. Our innovative architecture allows for peer-to-peer communication, encrypted messaging, and secure key management all within the app itself.</p>
+        <p>SPEEM aims to provide a truly private messaging experience. By eliminating the need for centralized servers, we ensure that your data remains in your hands. Our architecture allows for peer-to-peer communication, encrypted messaging, and secure key management all within the app itself.</p>
     </section>
 
     <section>
@@ -87,6 +105,18 @@
             <li><strong>Version 1 (V1):</strong> Enhanced features like message queuing, push notifications, user presence, and decentralized discovery.</li>
             <li><strong>Future Versions:</strong> Continuous improvements based on user feedback, enhanced security protocols, and more features to ensure the best private messaging experience.</li>
         </ul>
+    </section>
+
+    <section>
+        <h2>Performance and Usability</h2>
+        <p>At SPEEM, we are committed to providing maximum performance and usability for our users. To achieve this, we have chosen Rust for our core cryptographic and networking functionalities. Rust's memory safety and performance characteristics make it an ideal choice for building secure and efficient applications.</p>
+        <p>By utilizing Rust as a shared library, we ensure that our code is both robust and performant. Additionally, we are developing native mobile apps for both iOS and Android, which allows us to leverage the full capabilities of each platform and provide a seamless user experience.</p>
+        <p>This approach enables us to combine the best of both worlds: the safety and speed of Rust, along with the native performance and usability of platform-specific mobile development.</p>
+    </section>
+
+    <section>
+        <h2>About the Developer</h2>
+        <p>SPEEM is currently a solo endeavor by Wassim Mansouri. For more information about Wassim and his work, visit his <a href="https://wassimans.com" target="_blank">personal website</a>.</p>
     </section>
 </div>
 
