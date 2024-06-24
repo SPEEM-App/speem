@@ -16,7 +16,7 @@ impl Storage {
 	pub async fn init(&self) -> Result<()> {
 		sqlx::query(
 			r#"
-                        CREATE TABLE IF NOT EXISTS users (
+            CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY,
                 email TEXT NOT NULL UNIQUE,
                 display_name TEXT,

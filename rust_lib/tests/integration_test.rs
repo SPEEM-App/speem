@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod integration_test {
-    use super::*;
-    use crate::storage::Storage;
+    use tokio;
+    use speem::storage::Storage;
 
     #[tokio::test]
     async fn test_database_init() {

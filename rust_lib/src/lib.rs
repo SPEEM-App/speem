@@ -6,7 +6,6 @@ pub mod storage;
 #[cfg(test)]
 mod tests {
     use super::*;
-    use sqlx::sqlite::SqlitePoolOptions;
 
     #[tokio::test]
     async fn test_storage_init() {

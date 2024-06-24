@@ -11,3 +11,6 @@ once_cell = "1.19.0"
 ring = "0.17.8"
 sqlx = { version = "0.7.4", features = ["runtime-tokio-rustls", "sqlite"] }
 thiserror = "1.0.61"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
