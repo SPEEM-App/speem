@@ -20,4 +20,6 @@ impl From<ring::error::Unspecified> for AppError {
     fn from(_: ring::error::Unspecified) -> Self { AppError::CryptoError }
 }
 
+
+
 pub type Result<T> = std::result::Result<T, AppError>;
