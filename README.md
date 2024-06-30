@@ -1,131 +1,89 @@
-# SPEEM (Serverless Private Encrypted End-to-End Messaging) - WIP
 
-<p align="center">
-    <img src="docs/assets/logo.png" width="400" alt="SPEEM logo">
-</p>
+# SPEEM
 
-SPEEM is a highly secure, serverless messaging application designed for maximum privacy. Users can send encrypted messages directly to their trusted contacts without relying on any central servers. The application features end-to-end encryption, secure local storage, and a user-friendly pairing process via QR codes.
+**Secure Password Encryption and Easy Management**
+
+SPEEM is a secure password manager designed to provide maximum security and ease of use. With SPEEM, your passwords and sensitive information are stored locally on your device, encrypted and accessible only to you. SPEEM eliminates the need for cloud storage, ensuring your data remains under your control.
 
 ## Features
 
-- **End-to-End Encryption**: All messages are encrypted using strong cryptographic algorithms, ensuring that only the intended recipient can read them.
-- **Serverless Architecture**: Messages are stored only on users' devices, eliminating the need for central servers.
-- **Secure Key Management**: Each user has a unique public/private key pair, securely managed and stored.
-- **QR Code Pairing**: Users can easily add trusted contacts by scanning QR codes.
-- **Cross-Platform**: Available for both iOS and Android, with a shared Rust library for core cryptographic functions.
+- **Local Encryption**: All data is encrypted locally on your device, ensuring maximum security.
+- **End-to-End Encryption**: Only you have access to your encrypted data.
+- **Device Syncing**: Seamless syncing across your devices via local network or secure peer-to-peer connections.
+- **Mnemonic Recovery Phrases**: Secure account recovery using mnemonic phrases.
+- **User-Friendly Interface**: Easy to manage and access your passwords.
 
-## Technical Highlights
+## Roadmap
 
-SPEEM leverages Rust for its core cryptographic and networking operations, encapsulated in a shared library used by both the iOS and Android applications. This approach was chosen for several reasons:
+We are currently in the development phase, working towards our first version. Our roadmap includes:
 
-- **Performance and Safety**: Rust offers memory safety guarantees without a garbage collector, making it an ideal choice for performance-critical and secure applications.
-- **Code Reusability**: By using a shared Rust library, we ensure that critical code is written once and reused across both platforms, reducing the potential for bugs and inconsistencies.
-- **Cross-Platform Development**: Rust’s ability to compile to native code for both iOS and Android streamlines the development process and ensures that the security and cryptographic features are consistent across platforms.
-- **FFI (Foreign Function Interface)**: Rust’s robust FFI support allows seamless integration with Swift on iOS and Kotlin on Android, enabling us to build a unified codebase while leveraging platform-specific features and optimizations.
+### Version 1 (V1)
 
-For more detailed information on the architecture of the project, read the [ARCHITECTURE overview](docs/ARCHITECTURE.md)
+- Core functionalities including secure password storage, local encryption, and device syncing.
 
-## Project Structure
+### Future Versions
 
-*Note**: May change with time.
+- Enhancements based on user feedback
+- Additional security protocols
+- Mobile applications
+- More features to provide the best password management experience
 
-```
-SPEEM/
-├── rust_lib/                 # Rust shared library
-│   ├── src/
-│   │   ├── lib.rs
-│   │   ├── crypto.rs
-│   │   ├── storage.rs
-│   │   └── p2p.rs
-│   ├── Cargo.toml
-│   └── Cargo.lock
-├── ios_app/                  # iOS app
-│   ├── SPEEM/
-│   │   ├── AppDelegate.swift
-│   │   ├── ContentView.swift
-│   │   ├── QRCodeScanner.swift
-│   │   └── ...               # Other SwiftUI views and controllers
-│   ├── SPEEM.xcodeproj/
-│   ├── rust_lib_bridge/      # Rust to Swift bindings
-│   │   ├── rust_lib.h
-│   │   └── rust_lib.swift
-│   └── ...                   # Other iOS-specific files
-├── android_app/              # Android app
-│   ├── app/
-│   │   ├── src/
-│   │   │   ├── main/
-│   │   │   │   ├── java/com/cipherchat/
-│   │   │   │   │   ├── MainActivity.kt
-│   │   │   │   │   └── QRCodeScanner.kt
-│   │   │   │   └── jni/     # Rust to Kotlin bindings
-│   │   │   │       ├── rust_lib.h
-│   │   │   │       └── rust_lib.kt
-│   │   ├── build.gradle
-│   │   └── ...               # Other Android-specific files
-├── scripts/                  # Build and deployment scripts
-│   ├── build_rust_lib.sh
-│   ├── deploy_ios.sh
-│   └── deploy_android.sh
-├── tests/                    # Integration and end-to-end tests
-│   ├── rust_tests.rs
-│   ├── ios_tests.swift
-│   └── android_tests.kt
-├── docs/                     # Documentation
-│   ├── assets/
-│   │   ├── logo.png
-│   ├── architecture.md
-│   ├── setup.md
-│   └── usage.md
-├── README.md
-├── LICENSE
-└── .gitignore
-```
+## Performance and Usability
+
+At SPEEM, we are committed to providing maximum performance and usability for our users. To achieve this, we have chosen Rust for our core cryptographic and storage functionalities. Rust's memory safety and performance characteristics make it an ideal choice for building secure and efficient applications.
+
+By utilizing Rust for both business logic and the graphical user interface, we ensure that our code is both robust and performant. Additionally, we will develop native applications for major desktop operating systems, followed by mobile apps, to leverage the full capabilities of each platform and provide a seamless user experience.
+
+This approach enables us to combine the best of both worlds: the safety and speed of Rust, along with a user-friendly and performant application.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Rust and Cargo installed
-- Xcode for iOS development
-- Android Studio for Android development
+- Rust (latest stable version)
+- Cargo (Rust package manager)
+- SQLite
+- SQLCipher
 
-### Building the Project
+### Installation
 
-1. **Clone the Repository**:
-   ```sh
-   git clone https://github.com/wassimans/SPEEM.git
-   cd SPEEM
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/SPEEM-App/speem-app.git
+   cd speem-app
    ```
 
-2. **Build the Rust Library**:
-   ```sh
-   cd rust_lib
+2. Build the project:
+
+   ```bash
    cargo build --release
    ```
 
-3. **Set Up iOS App**:
-   - Open `ios_app/SPEEM.xcodeproj` in Xcode.
-   - Configure the project settings as needed.
-   - Build and run the project on a simulator or device.
+3. Run the application:
 
-4. **Set Up Android App**:
-   - Open `android_app` in Android Studio.
-   - Sync the project with Gradle files.
-   - Build and run the project on an emulator or device.
+   ```bash
+   cargo run
+   ```
+
+### Configuration
+
+SPEEM uses a configuration file (`config.json`) for database setup and other configurations. Make sure to set the `database_url` and `database_passphrase` appropriately.
 
 ## Contributing
 
-TODO
+SPEEM is currently a solo endeavor by [Wassim Mansouri](https://wassimans.com), developed in the [open](https://github.com/SPEEM-App/speem-app). While contributions are not currently being accepted, we plan to open the project for contributions once we are past the V1 milestone.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- Thanks to the Rust community for providing excellent resources and support.
-- Inspired by privacy-focused communication tools and open-source projects.
-
 ## Contact
 
-For any inquiries or issues, please contact me: wassim [at] wassimans [dot] com.
+For more information about the developer, visit [Wassim Mansouri's personal website](https://wassimans.com).
+
+## Acknowledgments
+
+- Inspired by the need for a secure, serverless and private password manager.
+- Built with love and passion for privacy and security.
+
