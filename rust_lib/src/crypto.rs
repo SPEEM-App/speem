@@ -1,3 +1,5 @@
+use bip39::{Language, Mnemonic};
+use rand::rngs::OsRng;
 use rsa::{pkcs1::DecodeRsaPublicKey, pkcs8::DecodePrivateKey, RsaPublicKey, RsaPrivateKey, Pkcs1v15Encrypt};
 use ring::aead::{Aad, LessSafeKey, Nonce, UnboundKey, AES_256_GCM};
 use ring::rand::{SecureRandom, SystemRandom};
@@ -93,6 +95,26 @@ impl Crypto {
 
 		// Return the decrypted symmetric key
 		Ok(decrypted_key)
+	}
+
+	pub fn generate_mnemonic() -> Result<(String, String)> {
+		let rng = SystemRandom::new();
+		let mut entropy = vec![0u8; 4];
+		rng.fill(&mut entropy).map_err(|_| ring::error::Unspecified).map_err(|_| AppError::CryptoError)?;
+		let mnemonic = Mnemonic::from_entropy(&entropy).map_err(|_| AppError::CryptoError)?;
+		let mut mnemonic_phrase = String::from("");
+		let _ = mnemonic.word_iter().map(|word| mnemonic_phrase.push_str(format!("{word} ").as_str()));
+		let seed = mnemonic.to_seed("");
+		let encryption_key = hex::encode(&seed[0..32]);
+		Ok((mnemonic_phrase.trim_end().to_owned(), encryption_key))
+	}
+
+	pub fn mnemonic_to_key(mnemonic_phrase: &str) -> Result<String> {
+		let mnemonic = Mnemonic::from_phrase(mnemonic_phrase, Language::English)
+			.map_err(|_| AppError::CryptoError)?;
+		let seed = mnemonic.to_seed("");
+		let encryption_key = hex::encode(&seed[0..32]);
+		Ok(encryption_key)
 	}
 }
 
