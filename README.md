@@ -1,89 +1,62 @@
+# SPEEM - Serverless Privacy Enhanced and Encrypted apps for Mobile
 
-# SPEEM
+Welcome to SPEEM, a suite of Serverless Privacy Enhanced and Encrypted apps for Mobile designed to protect your digital life. SPEEM ensures that your data is secure and private without relying on centralized servers.
 
-**Secure Password Encryption and Easy Management**
+## About SPEEM
 
-SPEEM is a secure password manager designed to provide maximum security and ease of use. With SPEEM, your passwords and sensitive information are stored locally on your device, encrypted and accessible only to you. SPEEM eliminates the need for cloud storage, ensuring your data remains under your control.
+SPEEM aims to provide a comprehensive privacy-focused experience. By eliminating the need for centralized servers, we ensure that your data remains in your hands. Our architecture allows for secure storage, encrypted communications, and seamless management of your sensitive information all within the app itself.
 
-## Features
+## Key Features
 
-- **Local Encryption**: All data is encrypted locally on your device, ensuring maximum security.
-- **End-to-End Encryption**: Only you have access to your encrypted data.
-- **Device Syncing**: Seamless syncing across your devices via local network or secure peer-to-peer connections.
-- **Mnemonic Recovery Phrases**: Secure account recovery using mnemonic phrases.
-- **User-Friendly Interface**: Easy to manage and access your passwords.
+- **Fully serverless architecture for maximum privacy.**
+- **End-to-end encryption to secure your data.**
+- **Local storage and peer-to-peer syncing for enhanced security.**
+- **User-friendly interface with robust security features.**
+- **Cross-platform support for Android and iOS.**
 
-## Roadmap
+## Phased Development Plan
 
-We are currently in the development phase, working towards our first version. Our roadmap includes:
+### Phase 1: SPEEM Pass
 
-### Version 1 (V1)
+A password manager for secure password storage and management. Key features include:
+- Secure password generation and storage.
+- Autofill capabilities for easy login.
+- Backup and restore functionality using encrypted local storage.
 
-- Core functionalities including secure password storage, local encryption, and device syncing.
+### Phase 2: SPEEM Note
 
-### Future Versions
+A secure note-taking app for encrypted personal and professional notes. Key features include:
+- End-to-end encrypted note storage.
+- Tagging and organization features.
+- Backup and restore functionality using encrypted local storage.
 
-- Enhancements based on user feedback
-- Additional security protocols
-- Mobile applications
-- More features to provide the best password management experience
+### Phase 3: SPEEM Vault
+
+A file vault for secure storage of sensitive documents and files. Key features include:
+- End-to-end encrypted file storage.
+- Secure file sharing options.
+- Backup and restore functionality using encrypted local storage.
 
 ## Performance and Usability
 
-At SPEEM, we are committed to providing maximum performance and usability for our users. To achieve this, we have chosen Rust for our core cryptographic and storage functionalities. Rust's memory safety and performance characteristics make it an ideal choice for building secure and efficient applications.
+At SPEEM, we are committed to providing maximum performance and usability for our users. To achieve this, we have chosen Rust for our core cryptographic and networking functionalities. Rust's memory safety and performance characteristics make it an ideal choice for building secure and efficient applications.
 
-By utilizing Rust for both business logic and the graphical user interface, we ensure that our code is both robust and performant. Additionally, we will develop native applications for major desktop operating systems, followed by mobile apps, to leverage the full capabilities of each platform and provide a seamless user experience.
+By utilizing Rust as a shared library, we ensure that our code is both robust and performant. Additionally, we are developing native mobile apps for both iOS and Android, which allows us to leverage the full capabilities of each platform and provide a seamless user experience.
 
-This approach enables us to combine the best of both worlds: the safety and speed of Rust, along with a user-friendly and performant application.
+This approach enables us to combine the best of both worlds: the safety and speed of Rust, along with the native performance and usability of platform-specific mobile development.
 
-## Getting Started
+## About the Developer
 
-### Prerequisites
-
-- Rust (latest stable version)
-- Cargo (Rust package manager)
-- SQLite
-- SQLCipher
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/SPEEM-App/speem-app.git
-   cd speem-app
-   ```
-
-2. Build the project:
-
-   ```bash
-   cargo build --release
-   ```
-
-3. Run the application:
-
-   ```bash
-   cargo run
-   ```
-
-### Configuration
-
-SPEEM uses a configuration file (`config.json`) for database setup and other configurations. Make sure to set the `database_url` and `database_passphrase` appropriately.
+SPEEM is currently a solo endeavor by [Wassim Mansouri](https://wassimans.com), developed in the [open](https://github.com/SPEEM-App/speem-app).
 
 ## Contributing
 
-SPEEM is currently a solo endeavor by [Wassim Mansouri](https://wassimans.com), developed in the [open](https://github.com/SPEEM-App/speem-app). While contributions are not currently being accepted, we plan to open the project for contributions once we are past the V1 milestone.
+We welcome contributions to SPEEM! Please feel free to submit issues, fork the repository, and send pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
-
-For more information about the developer, visit [Wassim Mansouri's personal website](https://wassimans.com).
-
 ## Acknowledgments
 
-- Inspired by the need for a secure, serverless and private password manager.
-- Built with love and passion for privacy and security.
-
+Special thanks to the Rust community and all the contributors to the libraries and tools that made this project possible.
