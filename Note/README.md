@@ -1,2 +1,0 @@
-# SPEEM Note
-
