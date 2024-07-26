@@ -51,7 +51,7 @@ SPEEM is currently a solo endeavor by [Wassim Mansouri](https://wassimans.com), 
 
 ## Contributing
 
-We welcome contributions to SPEEM! Please feel free to submit issues, fork the repository, and send pull requests. For major changes, please open an issue first to discuss what you would like to change.
+SPEEM is still in active development. We welcome contributions to SPEEM once we hit the v1 landmark.
 
 ## License
 
