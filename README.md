@@ -1,62 +1,34 @@
-# SPEEM - Serverless Privacy Enhanced and Encrypted apps for Mobile
+# SPEEM - Substrate & Pallet Engineering & Environment Management
 
-Welcome to SPEEM, a suite of Serverless Privacy Enhanced and Encrypted apps for Mobile designed to protect your digital life. SPEEM ensures that your data is secure and private without relying on centralized servers.
+## Introduction
+Welcome to SPEEM, the integrated development environment designed for enhancing the productivity and capabilities of Substrate blockchain developers. This tool focuses on providing robust development and testing utilities tailored specifically for Substrate and FRAME pallets, facilitating a streamlined workflow for blockchain creation and management.
 
 ## About SPEEM
+SPEEM (Substrate & Pallet Engineering & Environment Management) is a comprehensive toolkit aimed at simplifying the complexities of Substrate blockchain development. It integrates various features essential for configuring, testing, and managing Substrate blockchains and their components.
 
-SPEEM aims to provide a comprehensive privacy-focused experience. By eliminating the need for centralized servers, we ensure that your data remains in your hands. Our architecture allows for secure storage, encrypted communications, and seamless management of your sensitive information all within the app itself.
+## Mission
+Our mission is to empower developers with an advanced set of tools that streamline the development process of Substrate-based blockchains. SPEEM aims to reduce the overhead associated with the blockchain development lifecycle, from initial configuration to deployment and testing.
 
 ## Key Features
+- **Environment Management**: Manage and customize local Substrate development environments easily.
+- **Pallet Configuration Panels**: Configure and manage the behavior of different FRAME pallets interactively.
+- **Real-Time Monitoring and Logging**: Monitor blockchain events and system logs in real time.
+- **Integration Testing Tools**: Conduct comprehensive integration tests that simulate real-world scenarios and interactions between multiple pallets.
+- **User-Friendly Interface**: Navigate through complex development tasks with an intuitive user interface.
 
-- **Fully serverless architecture for maximum privacy.**
-- **End-to-end encryption to secure your data.**
-- **Local storage and peer-to-peer syncing for enhanced security.**
-- **User-friendly interface with robust security features.**
-- **Cross-platform support for Android and iOS.**
+## Development Phases
+SPEEM's development is planned to roll out in phases:
+- **Phase 1: Proof of Concept (PoC)** - Focus on core functionalities including pallet configuration and event monitoring.
+- **Future Releases**: Will introduce more advanced features, enhancing the tool to support broader integration and testing capabilities.
 
-## Phased Development Plan
+We aim to develop SPEEM in a way that it continues to serve as a vital tool for all Substrate developers, adapting to new challenges and requirements of blockchain technology.
 
-### Phase 1: SPEEM Pass
+## Contributions
+SPEEM is currently a work in progress. We are excited about community contributions! While the initial development up to v1 is being carried out internally, we eagerly anticipate and welcome community contributions post-v1 release. Once there, please feel free to fork the repository, and prepare pull requests for features you believe would enhance the SPEEM toolkit.
 
-A password manager for secure password storage and management. Key features include:
-- Secure password generation and storage.
-- Autofill capabilities for easy login.
-- Backup and restore functionality using encrypted local storage.
+## Licensing
+SPEEM is provided under the MIT License.
 
-### Phase 2: SPEEM Note
-
-A secure note-taking app for encrypted personal and professional notes. Key features include:
-- End-to-end encrypted note storage.
-- Tagging and organization features.
-- Backup and restore functionality using encrypted local storage.
-
-### Phase 3: SPEEM Vault
-
-A file vault for secure storage of sensitive documents and files. Key features include:
-- End-to-end encrypted file storage.
-- Secure file sharing options.
-- Backup and restore functionality using encrypted local storage.
-
-## Performance and Usability
-
-At SPEEM, we are committed to providing maximum performance and usability for our users. To achieve this, we have chosen Rust for our core cryptographic and networking functionalities. Rust's memory safety and performance characteristics make it an ideal choice for building secure and efficient applications.
-
-By utilizing Rust as a shared library, we ensure that our code is both robust and performant. Additionally, we are developing native mobile apps for both iOS and Android, which allows us to leverage the full capabilities of each platform and provide a seamless user experience.
-
-This approach enables us to combine the best of both worlds: the safety and speed of Rust, along with the native performance and usability of platform-specific mobile development.
-
-## About the Developer
-
-SPEEM is currently a solo endeavor by [Wassim Mansouri](https://wassimans.com), developed in the [open](https://github.com/SPEEM-App/speem-app).
-
-## Contributing
-
-SPEEM is still in active development. We welcome contributions to SPEEM once we hit the v1 landmark.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-Special thanks to the Rust community and all the contributors to the libraries and tools that made this project possible.
+## FAQ
+- **Why startung this project**: Simple, I just wanted to learn Substrate and FRAME pallet developmnet as deep as possible, so I decided to build tooling around them in order to better understand them. 
+- **Why that name (Substrate & Pallet Engineering & Environment Management)**: I already owned the speem.app domain name, so I did what I can to match the names. And hey, did you look at what FRAME means?.
