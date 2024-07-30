@@ -1,4 +1,4 @@
-# SPEEM - Substrate & Pallet Engineering & Environment Management
+# SPEEM - Substrate Pallet Engineering & Environment Management
 
 ## Introduction
 Welcome to SPEEM, the integrated development environment designed for enhancing the productivity and capabilities of Substrate blockchain developers. This tool focuses on providing robust development and testing utilities tailored specifically for Substrate and FRAME pallets, facilitating a streamlined workflow for blockchain creation and management.
@@ -30,5 +30,5 @@ SPEEM is currently a work in progress. We are excited about community contributi
 SPEEM is provided under the MIT License.
 
 ## FAQ
-- **Why startung this project**: Simple, I just wanted to learn Substrate and FRAME pallet developmnet as deep as possible, so I decided to build tooling around them in order to better understand them. 
+- **Why starting this project**: Simple, I just wanted to learn Substrate and FRAME pallet developmnet as deep as possible, so I decided to build tooling around them in order to better understand them. 
 - **Why that name (Substrate & Pallet Engineering & Environment Management)**: I already owned the speem.app domain name, so I did what I can to match the names. And hey, did you look at what FRAME means?.
