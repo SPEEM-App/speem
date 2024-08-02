@@ -38,3 +38,5 @@ SPEEM is currently a work in progress. We are excited about community contributi
 ## Licensing
 SPEEM is provided under the MIT License.
 
+## Wiki
+Please read the project [Wiki](https://github.com/SPEEM-App/speem/wiki) for more indepth information.
