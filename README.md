@@ -1,5 +1,10 @@
 # SPEEM - Secure Papers and Encrypted Educational Manuscripts
 
+## :warning: :construction: Under Active Development :construction: :warning:
+
+The SPEEM project is still in early stages and very much a work in progress. More features will be added,
+docs may be missing or outdated and api/config may change.
+
 ## Introduction
 Welcome to SPEEM, the blockchain-based platform designed for secure storage, management, and verification of academic research papers. Utilizing Substrate's flexible blockchain framework, SPEEM ensures the provenance, integrity, and verifiability of academic publications, fostering a trustworthy and accessible knowledge base.
 
